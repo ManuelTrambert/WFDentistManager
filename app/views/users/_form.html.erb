@@ -15,6 +15,11 @@
 
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
+    
+  <div class="mb-3 custom-control custom-checkbox">
+      <%= f.check_box :admin, class: 'custom-control-input' %>
+      <label class="custom-control-label" for="user_admin">Make this account administrator</label>
+  </div>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
