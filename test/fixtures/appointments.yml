@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-05-02 00:14:53
+  doctorId: 1
+  patientId: 1
+  timeSpent: 2018-05-02 00:14:53
+  price: 1
+  note: MyText
+
+two:
+  date: 2018-05-02 00:14:53
+  doctorId: 1
+  patientId: 1
+  timeSpent: 2018-05-02 00:14:53
+  price: 1
+  note: MyText

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  articleId: 1
+  fileName: MyString
+
+two:
+  articleId: 1
+  fileName: MyString
