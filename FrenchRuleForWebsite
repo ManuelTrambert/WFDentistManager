@@ -1,11 +1,11 @@
+---------------------------- // TODO // ----------------------------
 
 Deux types de login -> Admin & Public
 
 3 types de users :
-Public (Lambda) -> 3
+Public (Lambda) -> 2
 Manager (Owner) -> 0
 Staff (Secretaire, dentiste, infirmière) -> 1
-Stagiaire (Dentiste stagiaire) -> 2
 
 Public :
 Page Home (Dynamique)
