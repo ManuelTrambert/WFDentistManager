@@ -15,6 +15,7 @@ class Admin::StaffsController < AdminController
   end
 
   def new
+    @user = User.all
     @staff = Staff.new
   end
 
@@ -29,6 +30,6 @@ class Admin::StaffsController < AdminController
   private
 
   def staff_params
-    params.require(:staff).permit(:first_name, :last_name, :email, :status)
+    params.require(:staff).permit(:dentalNumber)
   end
 end
