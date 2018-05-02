@@ -24,6 +24,7 @@ class Admin::StaffsController < AdminController
       flash[:info] = "Staff member has been added"
       redirect_to root_url
     else
+      @staff.errors.full_messages
       render 'new'
     end
   end
