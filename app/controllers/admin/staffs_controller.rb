@@ -19,8 +19,8 @@ class Admin::StaffsController < AdminController
   end
 
   def create
-    logger.debug staff_params[:userId]
-    @user = User.find_by(id: staff_params[:userId])
+    logger.debug staff_params[:user_id]
+    @user = User.find_by(id: staff_params[:user_id])
     @staff = @user.staff.build(staff_params)
     if @staff.save
       flash[:info] = "Staff member has been added"
@@ -42,6 +42,6 @@ class Admin::StaffsController < AdminController
   private
 
   def staff_params
-    params.require(:staff).permit(:dentalNumber, :userId, :phoneNumber)
+    params.require(:staff).permit(:dentalNumber, :user_id, :phoneNumber)
   end
 end
