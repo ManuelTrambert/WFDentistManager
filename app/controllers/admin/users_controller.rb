@@ -1,6 +1,4 @@
-class AdminController < ApplicationController
-  before_action :authorized?
-
+class Admin::UsersController < AdminController
   def edit
     @user = User.find(params[:id])
   end
@@ -12,14 +10,6 @@ class AdminController < ApplicationController
       redirect_to @user
     else
       render 'edit'
-    end
-  end
-
-  private
-  def authorized?
-    unless current_user.admin?
-      flash[:error] = "You are not authorized to view that page."
-      redirect_to root_path
     end
   end
 end
