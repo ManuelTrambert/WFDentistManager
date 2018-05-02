@@ -19,7 +19,7 @@ class Admin::StaffsController < AdminController
   end
 
   def create
-    @user = users(:staff_params.id)
+    @user = users(:staff_params.userId)
     @staff = @user.staff.build(staff_params)
     @staff.errors.full_messages
     if @staff.save
