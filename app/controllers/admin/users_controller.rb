@@ -1,4 +1,5 @@
 class Admin::UsersController < AdminController
+
   def edit
     @user = User.find(params[:id])
   end
@@ -9,7 +10,7 @@ class Admin::UsersController < AdminController
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      render root_path
+      render 'edit'
     end
   end
 
