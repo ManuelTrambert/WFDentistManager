@@ -20,7 +20,7 @@ class Admin::StaffsController < AdminController
 
   def create
     @staff = Staff.new(staff_params)
-    logger(staff_params)
+    logger.debug staff_params
     if @staff.save
       flash[:info] = "Staff member has been added"
       redirect_to root_url
