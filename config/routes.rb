@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  post '/admin/staffs/new', to: 'admin/staffs#new'
+  post '/admin/staffs/new', to: 'admin/staffs#create'
 
   namespace :admin do
     resources :users
