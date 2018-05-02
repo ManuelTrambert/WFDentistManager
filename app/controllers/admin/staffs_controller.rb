@@ -41,6 +41,6 @@ class Admin::StaffsController < AdminController
   private
 
   def staff_params
-    params.require(:staff).permit(:dentalNumber, :userId)
+    params.require(:staff).permit(:dentalNumber, :userId, :phoneNumber)
   end
 end
