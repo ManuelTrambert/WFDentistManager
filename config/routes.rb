@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     resources :patients
   end
 
+  resources :staffs
+  resources :patients
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
