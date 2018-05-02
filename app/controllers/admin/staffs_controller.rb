@@ -19,10 +19,8 @@ class Admin::StaffsController < AdminController
   end
 
   def create
-    logger.debug staff_params[:user_id]
     @user = User.find_by(id: staff_params[:user_id])
-    logger.debug @user
-    @staff = @user.staffs.build(staff_params)
+    @staff = @user.staff.build(staff_params)
     if @staff.save
       flash[:info] = "Staff member has been added"
       redirect_to root_url
