@@ -1,4 +1,4 @@
-class AdminsController < ApplicationController
+class AdminController < ApplicationController
   before_action :authorized?
 
   def edit
