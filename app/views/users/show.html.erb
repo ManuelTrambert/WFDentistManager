@@ -3,41 +3,25 @@
   <%= gravatar_for @user, size: 50 %>
   <%= link_to @user.first_name, @user %>
   <%= link_to @user.last_name, @user %>
-  
-          <h4 class="mb-3">Resume</h4>
-        <dl class="row">
-            <dt class="col-sm-3">Student informations</dt>
-            <dd class="col-sm-9">
-                <p>Thomas GILLARD</p>
-                <p>2953093</p>
-            </dd>
-            
-            <dt class="col-sm-3">Programming skills</dt>
-            <dd class="col-sm-9">
-                <p>C & C++</p>
-                <p>C# for Unity</p>
-                <p>Java for Android</p>
-            </dd>
-            
-            <dt class="col-sm-3">Contact information</dt>
-            <dd class="col-sm-9">
-                <p>thomas.gillard@epitech.eu</p>
-                <p>+33 6 12 14 38 17</p>
-            </dd>
-            
-            <dt class="col-sm-3">Courses taken</dt>
-            <dd class="col-sm-9">
-                <p>Computer Graphics</p>
-                <p>Distributed Systems</p>
-                <p>Data Structures and Algorithms</p>
-                <p>Emerging Technologies</p>
-                <p>Web Frameworks</p>
-            </dd>
-    
-            <dt class="col-sm-3">Hobbies and interest</dt>
-            <dd class="col-sm-9">
-                <p>Football</p>
-                <p>Video games</p>
-            </dd>
-        </dl>
+
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages', object: @user %>
+
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <% end %>
 </h1>

@@ -2,11 +2,13 @@
 
 Deux types de login -> Admin & Public
 
+// DB -> OK le champs status le représente
 3 types de users :
 Public (Lambda) -> 2
 Manager (Owner) -> 0
 Staff (Secretaire, dentiste, infirmière) -> 1
 
+// A faire
 Public :
 Page Home (Dynamique)
 Page About us (Dynamique)
@@ -15,16 +17,39 @@ Page contact us (Static)
 Page Procedures (Static)
 
 Admin :
-Manager :
-Gérer les pages public (CRUD) -> News, Home, About us
-Gérer les images sur les pages (CRUD) -> News, Home, About us
-Gérer la page News -> Ajout d’un article (CRUD)
-Gérer les utilisateurs (modifier leur profils -> les upgrades en admin ou staff CRUD)
-Gérer les dentiste stagiaire (Record name, email address, phone number, dental number & isActive) CRUD
-Vue reports -> Au minimum 4, les revenues générés par le rendez vous, le nombre d’heure travaillé par docteur
-Un manager a accès à toutes les fonctionnalités d’un Staff member
-Staff :
-Gérer les patients (CRUD) -> DB : Name, email, phone, allergies, note medical
-Gérer les rendez vous (CRUD) -> DB : date, horaire, dentiste, patient, durée du rendez vous en minutes, coût, notes, Géneralement les rendez vous durent 30 minutes mais les spécialistes peuvent avoir des rendez vous plus long. Un rendez vous initial est créé puis modifier pendant le rendez vous avec le prix et les notes
-Une vue avec tout les rendez vous (passé/futur pour un patient)
-Une vue avec tout les rendez vous (passé/futur pour un docteur) donner aussi une vue qui permet de voir les rendez vous du jour/semaine d’un docteur
+    Manager :
+
+        // A faire
+        Gérer les pages public (CRUD) -> News, Home, About us
+
+        // A faire
+        Gérer les images sur les pages (CRUD) -> News, Home, About us
+
+        // A faire
+        Gérer la page News -> Ajout d’un article (CRUD)
+
+        // A faire
+        Gérer les utilisateurs (modifier leur profils -> les upgrades en admin ou staff CRUD)
+
+        // A faire
+        Gérer les dentiste stagiaire (Record name, email address, phone number, dental number & isActive) CRUD
+
+        // A faire
+        Vue reports -> Au minimum 4, les revenues générés par le rendez vous, le nombre d’heure travaillé par docteur
+
+        // A faire
+        Un manager a accès à toutes les fonctionnalités d’un Staff member
+
+    Staff :
+
+        // A faire
+        Gérer les patients (CRUD) -> DB : Name, email, phone, allergies, note medical
+
+        // A faire
+        Gérer les rendez vous (CRUD) -> DB : date, horaire, dentiste, patient, durée du rendez vous en minutes, coût, notes, Géneralement les rendez vous durent 30 minutes mais les spécialistes peuvent avoir des rendez vous plus long. Un rendez vous initial est créé puis modifier pendant le rendez vous avec le prix et les notes
+
+        // A faire
+        Une vue avec tout les rendez vous (passé/futur pour un patient)
+
+        // A faire
+        Une vue avec tout les rendez vous (passé/futur pour un docteur) donner aussi une vue qui permet de voir les rendez vous du jour/semaine d’un docteur
