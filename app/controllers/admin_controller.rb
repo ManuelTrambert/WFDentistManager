@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :authorized?
+  before_action :authorized?
 
   def edit
     @user = User.find(params[:id])
