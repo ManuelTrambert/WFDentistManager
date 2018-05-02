@@ -3,7 +3,7 @@
 <h1>Sign up</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for([@user, @staff], :url => {:action => 'create'}) do |f| %>
+    <%= form_for([@user, @staff], :url => {:action => 'new'}) do |f| %>
 
       <%= f.label :dentalNumber %>
       <%= f.text_field :dentalNumber, class: 'form-control' %>
