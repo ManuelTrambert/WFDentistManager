@@ -9,7 +9,13 @@ class Admin::UsersController < AdminController
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      render 'edit'
+      render root_path
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email)
   end
 end
