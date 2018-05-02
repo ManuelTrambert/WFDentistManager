@@ -20,16 +20,15 @@ class Admin::StaffsController < AdminController
 
   def create
     @user = users(:staff_params.id)
-    @user.staff.build(staff_params)
-    ##@staff = Staff.new(staff_params)
-    ## @staff.errors.full_messages
-    ## if @staff.save
-    ##  flash[:info] = "Staff member has been added"
-    ##  redirect_to root_url
-    ##else
-    ## @staff.errors.full_messages
-    ## render 'new'
-    ##end
+    @staff = @user.staff.build(staff_params)
+    @staff.errors.full_messages
+    if @staff.save
+      flash[:info] = "Staff member has been added"
+      redirect_to root_url
+    else
+      @staff.errors.full_messages
+      render 'new'
+    end
   end
 
   def index
