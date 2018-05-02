@@ -9,7 +9,7 @@
       <%= f.text_field :dentalNumber, class: 'form-control' %>
 
 
-      <%= f.collection_select :user, User.all, :id, :first_name, include_blank: true %>
+      <%= f.collection_select :userId, User.all, :id, :first_name, include_blank: true %>
 
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
