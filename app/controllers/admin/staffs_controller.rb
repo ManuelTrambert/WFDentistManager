@@ -21,6 +21,7 @@ class Admin::StaffsController < AdminController
   def create
     logger.debug staff_params[:user_id]
     @user = User.find_by(id: staff_params[:user_id])
+    logger.debug @user
     @staff = @user.staff.build(staff_params)
     if @staff.save
       flash[:info] = "Staff member has been added"
