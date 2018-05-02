@@ -19,7 +19,7 @@ class Admin::StaffsController < AdminController
   end
 
   def create
-    @user = users.find_by(id: :userId)
+    @user = User.find_by(id: :userId)
     @staff = @user.staff.build(staff_params)
     if @staff.save
       flash[:info] = "Staff member has been added"
