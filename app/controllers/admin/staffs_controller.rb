@@ -19,9 +19,8 @@ class Admin::StaffsController < AdminController
   end
 
   def create
-    @user = users(params[:userId])
+    @user = users.find_by(id: :userId)
     @staff = @user.staff.build(staff_params)
-    @staff.errors.full_messages
     if @staff.save
       flash[:info] = "Staff member has been added"
       redirect_to root_url
