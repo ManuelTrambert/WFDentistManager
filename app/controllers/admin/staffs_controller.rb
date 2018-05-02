@@ -24,7 +24,7 @@ class Admin::StaffsController < AdminController
       flash[:info] = "Staff member has been added"
       redirect_to root_url
     else
-      render 'new'
+      render 'index'
     end
   end
 
