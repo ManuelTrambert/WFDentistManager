@@ -10,5 +10,8 @@
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control' %>
 
+  <%= f.label :status %>
+  <%= select_tag :status, options_for_select([["Staff", 1], ["Manager", 2], ["User", 0]]) %>
+
   <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
 <% end %>
