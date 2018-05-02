@@ -19,6 +19,7 @@ class Admin::StaffsController < AdminController
   end
 
   def create
+    logger.debug :userId
     @user = User.find_by(id: :userId)
     @staff = @user.staffs.build(staff_params)
     if @staff.save
