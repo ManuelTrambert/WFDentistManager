@@ -13,10 +13,8 @@
   <%= f.label :status %>
   <%= select_tag :status, options_for_select([["User", 0], ["Staff", 1], ["Manager", 2]]) %>
 
-  <% if current_user.admin? %>
-    <%= f.label :dental_number %>
-    <%= f.text_field :dental_number, class: 'form-control' %>
-  <% end %>
+  <%= f.label :staff.dental_number %>
+  <%= f.text_field :staff.dental_number, class: 'form-control' %>
 
   <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
 <% end %>
