@@ -16,7 +16,7 @@
   <% if current_user.admin? && !current_user?(user) %>
     <%= f.label :dental_number %>
     <%= f.text_field :dental_number, class: 'form-control' %>
-  <%= end %>
+  <% end %>
 
   <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
 <% end %>
