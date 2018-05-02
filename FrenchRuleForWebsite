@@ -2,11 +2,14 @@
 
 Deux types de login -> Admin & Public
 
+--------------------------- OK ---------------------------
 // DB -> OK le champs status le représente
 3 types de users :
 Public (Lambda) -> 2
 Manager (Owner) -> 0
 Staff (Secretaire, dentiste, infirmière) -> 1
+
+--------------------------- FIN ---------------------------
 
 // A faire
 Public :
@@ -28,8 +31,11 @@ Admin :
         // A faire
         Gérer la page News -> Ajout d’un article (CRUD)
 
-        // A faire
-        Gérer les utilisateurs (modifier leur profils -> les upgrades en admin ou staff CRUD)
+--------------------------- OK ---------------------------
+
+        Gérer les utilisateurs (modifier leur profils -> les upgrades en admin ou staff CRUD) OK
+
+--------------------------- FIN ---------------------------
 
         // A faire
         Gérer les dentiste stagiaire (Record name, email address, phone number, dental number & isActive) CRUD
