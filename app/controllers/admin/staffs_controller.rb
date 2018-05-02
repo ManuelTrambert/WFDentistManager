@@ -15,8 +15,17 @@ class Admin::StaffsController < AdminController
   end
 
   def new
-   # @user = User.all
     @staff = Staff.new
+  end
+
+  def create
+    @staff = Staff.new(staff_params)
+    if @staff.save
+      flash[:info] = "Staff member has been added"
+      redirect_to root_url
+    else
+      render 'new'
+    end
   end
 
   def index
