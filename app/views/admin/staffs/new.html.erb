@@ -6,7 +6,7 @@
     <%= form_for([@user, @staff], :url => {:action => 'create'}) do |f| %>
 
       <%= f.label :dentalNumber %>
-      <%= f.email_field :dentalNumber, class: 'form-control' %>
+      <%= f.text_field :dentalNumber, class: 'form-control' %>
 
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
