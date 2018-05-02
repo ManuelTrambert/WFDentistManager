@@ -16,6 +16,7 @@ class Admin::UsersController < AdminController
 
   def new
     @user = User.new
+    @staff = @user.staff.build
   end
 
   def index
