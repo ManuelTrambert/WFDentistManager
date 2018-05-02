@@ -20,7 +20,7 @@ class Admin::StaffsController < AdminController
 
   def create
     @user = User.find_by(id: :userId)
-    @staff = @user.staff.build(staff_params)
+    @staff = @user.staffs.build(staff_params)
     if @staff.save
       flash[:info] = "Staff member has been added"
       redirect_to root_url
