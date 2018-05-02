@@ -18,6 +18,10 @@ class Admin::UsersController < AdminController
     @user = User.new
   end
 
+  def index
+    @users = User.paginate(page: params[:page])
+  end
+
   private
 
   def user_params
