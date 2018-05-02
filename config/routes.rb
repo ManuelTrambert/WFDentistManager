@@ -17,12 +17,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
-    resources :staffs
-    resources :patients
+    resources :admin/staffs
+    resources :patient
   end
 
-  resources :staffs
-  resources :patients
+  resources :admin/staffs
+  resources :patient
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
