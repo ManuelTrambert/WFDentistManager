@@ -8,6 +8,9 @@
       <%= f.label :dentalNumber %>
       <%= f.text_field :dentalNumber, class: 'form-control' %>
 
+
+      <%= f.collection_select :id, User.order(:id),:id,:firstName,:lastName, include_blank: true %>
+
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
   </div>
