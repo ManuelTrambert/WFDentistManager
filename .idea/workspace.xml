@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9802b81-0646-4b7a-8010-79e44a03ba0f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -39,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_appointment.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_appointment.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/appointments/_appointment.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -99,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -200,7 +201,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20180503011949_change_user_id_name_patient.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/patients/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/patients/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/FrenchRuleForWebsite" />
         <option value="$PROJECT_DIR$/db/migrate/20180503013900_change_staff_id_and_patient_id_name.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/patients_controller.rb" />
@@ -212,6 +212,7 @@
         <option value="$PROJECT_DIR$/app/views/admin/appointments/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/appointments/_appointment.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -472,12 +473,12 @@
       <workItem from="1525189309000" duration="10888000" />
       <workItem from="1525219618965" duration="13949000" />
       <workItem from="1525242068922" duration="1958000" />
-      <workItem from="1525289358480" duration="26329000" />
+      <workItem from="1525289358480" duration="26389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54444000" />
+    <option name="totallyTimeSpent" value="54504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1650" height="1050" extended-state="0" />
@@ -806,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/patients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -938,6 +931,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
           <folding />
         </state>
       </provider>
