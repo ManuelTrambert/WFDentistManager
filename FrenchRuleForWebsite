@@ -54,8 +54,12 @@ Admin :
 
 --------------------------- FIN ---------------------------
 
+--------------------------- OK ---------------------------
+
         // A faire
         Gérer les rendez vous (CRUD) -> DB : date, horaire, dentiste, patient, durée du rendez vous en minutes, coût, notes, Géneralement les rendez vous durent 30 minutes mais les spécialistes peuvent avoir des rendez vous plus long. Un rendez vous initial est créé puis modifier pendant le rendez vous avec le prix et les notes
+
+--------------------------- FIN ---------------------------
 
         // A faire
         Une vue avec tout les rendez vous (passé/futur pour un patient)
