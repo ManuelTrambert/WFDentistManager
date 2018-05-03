@@ -20,7 +20,7 @@ class Admin::AppointmentsController < AdminController
 
   def create
     @staff = Staff.find_by(id: appointment_params[:staff_id])
-    @patient = Staff.find_by(id: appointment_params[:patient_id])
+    @patient = Patient.find_by(id: appointment_params[:patient_id])
     @appointment = @staff.patient.build(appointment_params)
     if @appointment.save
       flash[:info] = "Patient member has been added"
