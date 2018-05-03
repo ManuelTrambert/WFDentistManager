@@ -3,4 +3,5 @@
   <%= link_to staff.user.first_name, edit_admin_staff_path(staff) %>
   | <%= link_to "delete", staff, method: :delete,
                 data: {confirm: "You sure?"} %>
+  | <%= link_to "appointments list", admin_staff_path(user) %>
 </li>
