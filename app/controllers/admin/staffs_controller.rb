@@ -36,6 +36,7 @@ class Admin::StaffsController < AdminController
 
   def show
     @staff = Staff.find(params[:id])
+    @appointment = Appointment.find(staff_id: params[:id])
   end
 
   private
