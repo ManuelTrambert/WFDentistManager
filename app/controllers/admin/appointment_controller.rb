@@ -1,4 +1,4 @@
-class Admin::AppointmentsController < AdminController
+class Admin::AppointmentController < AdminController
 
   def edit
     @appointment = Appointment.find(params[:id])
