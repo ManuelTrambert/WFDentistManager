@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   post '/admin/staffs/new', to: 'admin/staffs#create'
   patch '/admin/staffs/:id', to: 'admin/staffs#update'
   patch 'staff/:id', to: 'admin/staffs#update'
+  post '/admin/patients/new', to: 'admin/patients#create'
+  patch '/admin/patients/:id', to: 'admin/patients#update'
+  patch 'patient/:id', to: 'admin/patients#update'
 
   namespace :admin do
     resources :users

@@ -1,0 +1,23 @@
+<% provide(:title, 'New staff member') %>
+<% provide(:button_text, 'Add staff') %>
+<h1>Sign up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@patient, :url => {:action => 'create'}) do |f| %>
+
+      <%= f.label :allergies %>
+      <%= f.text_field :allergies, class: 'form-control' %>
+
+      <%= f.label :note %>
+      <%= f.text_field :note, class: 'form-control' %>
+
+      <%= f.label :phoneNumber %>
+      <%= f.text_field :phoneNumber, class: 'form-control' %>
+
+      <%= f.label :user %>
+      <%= f.collection_select :user_id, User.all, :id, :first_name, include_blank: true %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
