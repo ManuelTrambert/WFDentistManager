@@ -45,6 +45,10 @@ module SessionsHelper
     cookies.delete(:remember_token)
   end
 
+  def admin?
+    current_user[:admin]
+  end
+
   def log_out
     forget(current_user)
     session.delete(:user_id)

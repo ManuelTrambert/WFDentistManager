@@ -8,7 +8,7 @@ class Admin::StaffsController < AdminController
     @staff = Staff.find(params[:id])
     if @staff.update_attributes(staff_params)
       flash[:success] = "Profile updated"
-      redirect_to @staff
+      redirect_to root_url
     else
       render 'edit'
     end
