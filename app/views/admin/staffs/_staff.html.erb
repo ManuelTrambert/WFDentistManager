@@ -1,6 +1,6 @@
 <li>
   <%= gravatar_for user, size: 50 %>
-  <%= link_to user.first_name, edit_admin_user_path(user) %>
-  | <%= link_to "delete", user, method: :delete,
+  <%= link_to staff.user.first_name, edit_admin_staff_path(staff) %>
+  | <%= link_to "delete", staff, method: :delete,
                 data: {confirm: "You sure?"} %>
 </li>
