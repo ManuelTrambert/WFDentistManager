@@ -28,7 +28,7 @@ Rails.application.routes.draw do
     resources :appointments
   end
 
-  resources :appointment
+  resources :appointments
   resources :staff
   resources :patient
   resources :users
