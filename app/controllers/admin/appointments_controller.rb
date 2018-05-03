@@ -32,11 +32,11 @@ class Admin::AppointmentsController < AdminController
   end
 
   def index
-    @appointments = Patient.paginate(page: params[:page])
+    @appointments = Appointment.paginate(page: params[:page])
   end
 
   def show
-    @appointment = Patient.find(params[:id])
+    @appointment = Appointment.find(params[:id])
   end
 
   private
