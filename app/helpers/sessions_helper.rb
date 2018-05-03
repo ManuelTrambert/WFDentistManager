@@ -46,7 +46,8 @@ module SessionsHelper
   end
 
   def admin?
-    current_user[:admin]?
+    logger.debug @current_user
+    @current_user[:admin]
   end
 
   def log_out
