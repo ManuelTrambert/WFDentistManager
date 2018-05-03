@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   post '/admin/staffs/new', to: 'admin/staffs#create'
+  patch '/admin/staffs/:id', to: 'admin/staffs#update'
 
   namespace :admin do
     resources :users
