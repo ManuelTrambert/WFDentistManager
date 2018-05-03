@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9802b81-0646-4b7a-8010-79e44a03ba0f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb" />
       <change beforePath="$PROJECT_DIR$/app/views/admin/appointments/new.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/appointments/new.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -33,8 +34,8 @@
       <file leaf-file-name="appointments_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            <state relative-caret-position="457">
+              <caret line="44" column="70" lean-forward="false" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -53,8 +54,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/admin/appointments/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="180">
+              <caret line="12" column="72" lean-forward="false" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -181,8 +182,8 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/patients_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/appointment_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/appointments/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb" />
       </list>
     </option>
   </component>
@@ -409,12 +410,12 @@
       <workItem from="1525189309000" duration="10888000" />
       <workItem from="1525219618965" duration="13949000" />
       <workItem from="1525242068922" duration="1958000" />
-      <workItem from="1525289358480" duration="23315000" />
+      <workItem from="1525289358480" duration="23416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51430000" />
+    <option name="totallyTimeSpent" value="51531000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1650" height="1050" extended-state="0" />
@@ -852,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin/patients_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -868,10 +861,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/appointments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="44" column="70" lean-forward="false" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/appointments/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="12" column="72" lean-forward="false" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
           <folding />
         </state>
       </provider>
