@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :staffs
-    resources :patient
+    resources :patients
   end
 
   resources :staff
