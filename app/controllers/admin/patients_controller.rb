@@ -41,6 +41,6 @@ class Admin::PatientsController < AdminController
   private
 
   def patient_params
-    params.require(:patient).permit(:dentalNumber, :user_id, :phoneNumber)
+    params.require(:patient).permit(:allergies, :user_id, :phoneNumber, :note)
   end
 end

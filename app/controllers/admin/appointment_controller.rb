@@ -1,0 +1,47 @@
+class Admin::AppointmentsController < AdminController
+
+  def edit
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+    if @appointment.update_attributes(appointment_params)
+      flash[:success] = "Profile updated"
+      redirect_to root_url
+    else
+      render 'edit'
+    end
+  end
+
+  def new
+    @appointment = Appointment.new
+  end
+
+  def create
+    @staff = Staff.find_by(id: appointment_params[:staff_id])
+    @patient = Staff.find_by(id: appointment_params[:patient_id])
+    @appointment = @staff.patient.build(appointment_params)
+    if @appointment.save
+      flash[:info] = "Patient member has been added"
+      redirect_to root_url
+    else
+      @appointment.errors.full_messages
+      render 'new'
+    end
+  end
+
+  def index
+    @appointments = Patient.paginate(page: params[:page])
+  end
+
+  def show
+    @appointment = Patient.find(params[:id])
+  end
+
+  private
+
+  def appointment_params
+    params.require(:appointment).permit(:date, :staff_id, :patient_id, :timeSpent, :price, :note)
+  end
+end

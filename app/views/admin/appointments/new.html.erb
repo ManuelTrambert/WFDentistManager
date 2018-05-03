@@ -1,0 +1,28 @@
+<% provide(:title, 'New staff member') %>
+<% provide(:button_text, 'Add appointment') %>
+<h1>Sign up</h1>
+<div class="row">
+  :date, :staff_id, :patient_id, :timeSpent, :price, :note
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@appointment, :url => {:action => 'create'}) do |f| %>
+
+      <%= f.date_field :date, class: 'form-control' %>
+
+      <%= f.number_field :amount, :class => 'text_field', :step => 0.5 %>
+
+      <%= f.label :phoneNumber %>
+      <%= f.text_field :phoneNumber, class: 'form-control' %>
+
+      <%= f.label :note %>
+      <%= f.text_field :note, class: 'form-control' %>
+
+      <%= f.label :staff %>
+      <%= f.collection_select :staff_id, Staff.all, :id, :first_name, include_blank: true %>
+
+      <%= f.label :patient %>
+      <%= f.collection_select :patient_id, Patient.all, :id, :first_name, include_blank: true %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

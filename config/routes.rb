@@ -25,8 +25,10 @@ Rails.application.routes.draw do
     resources :users
     resources :staffs
     resources :patients
+    resources :appointment
   end
 
+  resources :appointment
   resources :staff
   resources :patient
   resources :users
