@@ -42,6 +42,6 @@ class Admin::AppointmentsController < AdminController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:date, :patient_id, :price, :note, staffs_attributes: [:staff_id])
+    params.require(:appointment).permit(:date, :staff_id, :patient_id, :price, :note)
   end
 end

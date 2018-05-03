@@ -15,12 +15,11 @@
       <%= f.label :note %>
       <%= f.text_field :note, class: 'form-control' %>
 
-      <%= f.fields_for :staffs do |staff| %>
+      <%= f.label :staff %>
+      <%= f.collection_select :staff_id, Staff.all, :id, :user[:first_name], include_blank: true %>
 
-        <%= staff.label :staff %>
-        <%= staff.collection_select :staff_id, Staff.all, :id, :first_name, include_blank: true %>
-
-      <% end %>
+      <%= f.label :patient %>
+      <%= f.collection_select :patient_id, Patient.all, :id, :user[:first_name], include_blank: true %>
 
       <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
