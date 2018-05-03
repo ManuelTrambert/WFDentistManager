@@ -1,0 +1,19 @@
+<%= form_for(@staff, :url => {:action => 'update'}) do |f| %>
+
+  <%= f.label :date %>
+  <%= f.date_field :date, class: 'form-control' %>
+
+  <%= f.label :price %>
+  <%= f.number_field :price, :class => 'text_field', :step => 0.5 %>
+
+  <%= f.label :note %>
+  <%= f.text_field :note, class: 'form-control' %>
+
+  <%= f.label :staff %>
+  <%= f.collection_select :staff_id, Staff.all, :id, :dentalNumber, include_blank: true %>
+
+  <%= f.label :patient %>
+  <%= f.collection_select :patient_id, Patient.all, :id, :phoneNumber, include_blank: true %>
+
+  <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
+<% end %>
