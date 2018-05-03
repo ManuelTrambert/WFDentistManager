@@ -35,7 +35,8 @@ class Admin::PatientsController < AdminController
   end
 
   def show
-    @patient = Patient.find(params[:id])
+    @patients = Patient.find(params[:id])
+    @appointments = Appointment.find_by patient_id: params[:id]
   end
 
   private
