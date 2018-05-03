@@ -24,6 +24,7 @@ class Admin::UsersController < AdminController
 
   def show
     @user = User.find(params[:id])
+    @appointment = Appointment.find(staff_id: params[:id])
   end
 
   private
