@@ -1,5 +1,4 @@
 <%= form_for(@news, :url => {:action => 'create'}) do |f| %>
-  <%= render 'shared/error_messages', object: @news %>
 
   <%= f.label :Contents %>
   <%= f.text_field :text, class: 'form-control' %>
