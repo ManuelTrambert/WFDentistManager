@@ -1,0 +1,10 @@
+<%= form_for(@news, :url => {:action => 'update'}) do |f| %>
+
+  <%= f.label :Title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :Contents %>
+  <%= f.text_field :text, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>
