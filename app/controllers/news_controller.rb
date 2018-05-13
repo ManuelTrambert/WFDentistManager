@@ -11,7 +11,7 @@ class NewsController < ApplicationController
   end
 
   def new
-    @News = News.new
+    @news = News.new
     redirect_to root_url
   end
 
