@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   get 'users/new'
+  
+  get 'news/new'
 
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
@@ -29,13 +31,13 @@ Rails.application.routes.draw do
     resources :staffs
     resources :patients
     resources :appointments
+    resources :news
   end
 
   resources :appointment
   resources :staff
   resources :patient
   resources :users
-  resources :account_activations, only: [:edit]
-  resources :password_resets, only: [:new, :create, :edit, :update]
   resources :news
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end
