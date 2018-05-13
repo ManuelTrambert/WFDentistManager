@@ -6,7 +6,6 @@
         <li><%= link_to "News", news_path %></li>
         <li><%= link_to "Home", root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "News", new_admin_news_path %></li>
           <% if admin? || staff? == 1 %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
