@@ -8,7 +8,7 @@ class Admin::NewsController < AdminController
     @news = News.find(params[:id])
     if @news.update_attributes(news_params)
       flash[:success] = "News updated"
-      redirect_to @news
+      redirect_to root_url
     else
       render 'edit'
     end
