@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   before_action :admin_user,     only: [:destroy, :edit]
 
   def index
-    @news = .paginate(page: params[:page])
+    @news = News.paginate(page: params[:page])
   end
   
   def show
@@ -16,7 +16,7 @@ class NewsController < ApplicationController
   end
 
   def create
-    @news = News.new(user_params)
+    @news = News.new(news_params)
     end
   end
 
@@ -42,8 +42,8 @@ class NewsController < ApplicationController
 
   private
 
-    def user_params
-      params.require(:user).permit(:text)
+    def news_params
+      params.require(:news).permit(:text)
     end
 
     def logged_in_user
