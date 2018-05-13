@@ -19,8 +19,7 @@ class Admin::NewsController < AdminController
   end
 
   def create
-    @news = News.find_by(id: news_params[:news_id])
-    @news.update_attributes({status: 1})
+    @news = News.new(news_params)
     if @news.save
       flash[:info] = "News has been added"
       redirect_to root_url
