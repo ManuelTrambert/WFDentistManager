@@ -49,6 +49,10 @@ module SessionsHelper
     current_user[:admin]
   end
 
+  def staff?
+    current_user[:status]
+  end
+
   def log_out
     forget(current_user)
     session.delete(:user_id)

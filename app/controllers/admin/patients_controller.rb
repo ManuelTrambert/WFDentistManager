@@ -20,6 +20,7 @@ class Admin::PatientsController < AdminController
 
   def create
     @user = User.find_by(id: patient_params[:user_id])
+    @user.update_attributes({status: 2})
     @patient = @user.patient.build(patient_params)
     if @patient.save
       flash[:info] = "Patient member has been added"
