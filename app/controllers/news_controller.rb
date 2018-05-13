@@ -1,11 +1,11 @@
 class NewsController < ApplicationController
   before_action :logged_in_user, only: [:index]
-  before_action :admin_user,     only: [:destroy, :edit]
+  before_action :admin_user, only: [:destroy, :edit]
 
   def index
     @news = News.paginate(page: params[:page])
   end
-  
+
   def show
     @news = News.find(params[:id])
   end
@@ -17,7 +17,6 @@ class NewsController < ApplicationController
 
   def create
     @news = News.new(news_params)
-    end
   end
 
   def edit
@@ -27,13 +26,13 @@ class NewsController < ApplicationController
   def update
     @news = News.find(params[:id])
     if @news.update_attributes(user_params)
-         flash[:success] = "News updated"
+      flash[:success] = "News updated"
       redirect_to @user
     else
       render 'edit'
     end
   end
-  
+
   def destroy
     News.find(params[:id]).destroy
     flash[:success] = "News deleted"
@@ -42,24 +41,25 @@ class NewsController < ApplicationController
 
   private
 
-    def news_params
-      params.require(:news).permit(:text)
-    end
+  def news_params
+    params.require(:news).permit(:text)
+  end
 
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_url
     end
-       
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
-    
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
 end
