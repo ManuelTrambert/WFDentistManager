@@ -15,5 +15,8 @@
   <%= f.label :patient %>
   <%= f.collection_select :patient_id, Patient.all, :id, :phoneNumber, include_blank: true %>
 
+  <%= f.label :timespent %>
+  <%= f.input :timespent, as: :timespent, :minute_step => 15 %>
+
   <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
 <% end %>
