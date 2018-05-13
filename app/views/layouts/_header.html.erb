@@ -3,8 +3,8 @@
     <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "News", root_path %></li>
-        <li><%= link_to "Home", new_news_path %></li>
+        <li><%= link_to "News", new_news_path %></li>
+        <li><%= link_to "Home", root_path %></li>
         <% if logged_in? %>
           <% if admin? || staff? == 1 %>
             <li class="dropdown">
