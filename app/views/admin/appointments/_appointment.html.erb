@@ -1,5 +1,5 @@
 <li>
-  <%= link_to appointment, edit_admin_appointment_path(appointment) %>
+  <%= link_to appointment.patient.user.last_name, edit_admin_appointment_path(appointment) %>
   | <%= link_to "delete", appointment, method: :delete,
                 data: {confirm: "You sure?"} %>
 </li>
