@@ -3,5 +3,5 @@
   <%= link_to patient.user.last_name, edit_admin_patient_path(patient) %>
   | <%= link_to "delete", patient, method: :delete,
                 data: {confirm: "You sure?"} %>
-  | <%= link_to "appointments list", admin_patient_path(staff) %>
+  | <%= link_to "appointments list", admin_patient_path(patient) %>
 </li>
