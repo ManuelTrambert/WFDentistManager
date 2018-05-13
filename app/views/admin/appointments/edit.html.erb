@@ -1,5 +1,8 @@
 <%= form_for(@appointment, :url => {:action => 'update'}) do |f| %>
 
+  <%= f.label :timespent %>
+  <%= f.input :timespent, as: :timespent, :step => 15 %>
+
   <%= f.label :date %>
   <%= f.date_field :date, class: 'form-control' %>
 
@@ -14,9 +17,6 @@
 
   <%= f.label :patient %>
   <%= f.collection_select :patient_id, Patient.all, :id, :phoneNumber, include_blank: true %>
-
-  <%= f.label :timespent %>
-  <%= f.input :timespent, as: :timespent, :minute_step => 15 %>
 
   <%= f.submit yield("Save changes"), class: "btn btn-primary" %>
 <% end %>
