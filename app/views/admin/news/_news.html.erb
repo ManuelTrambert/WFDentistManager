@@ -1,0 +1,6 @@
+<li>
+  <% new.title %>
+  <%= link_to news.text, news %>
+  | <%= link_to "delete", articles, method: :delete,
+                data: {confirm: "You sure?"} %>
+</li>

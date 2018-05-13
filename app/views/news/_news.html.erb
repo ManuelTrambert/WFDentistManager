@@ -1,4 +1,4 @@
-<li id="micropost-<%= news.title %>">
+<li id="micropost-<%= news.title : %>">
   <span class="content"><%= news.text %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(news.created_at) %> ago.
