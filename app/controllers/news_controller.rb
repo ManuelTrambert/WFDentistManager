@@ -3,7 +3,7 @@ class NewsController < ApplicationController
   before_action :admin_user, only: [:destroy, :edit]
 
   def index
-    @newses = News.paginate(page: params[:page])
+    @news = News.paginate(page: params[:page])
   end
 
   def show
@@ -12,7 +12,6 @@ class NewsController < ApplicationController
 
   def new
     @new = News.new
-    redirect_to root_url
   end
 
   def create
