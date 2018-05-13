@@ -7,25 +7,25 @@ class NewsController < ApplicationController
   end
 
   def show
-    @news = News.find(params[:id])
+    @new = News.find(params[:id])
   end
 
   def new
-    @news = News.new
+    @new = News.new
     redirect_to root_url
   end
 
   def create
-    @news = News.new(news_params)
+    @new = News.new(news_params)
   end
 
   def edit
-    @news = News.find(params[:id])
+    @new = News.find(params[:id])
   end
 
   def update
-    @news = News.find(params[:id])
-    if @news.update_attributes(user_params)
+    @new = News.find(params[:id])
+    if @new.update_attributes(user_params)
       flash[:success] = "News updated"
       redirect_to @user
     else
