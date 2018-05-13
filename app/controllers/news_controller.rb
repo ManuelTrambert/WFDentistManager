@@ -6,6 +6,38 @@ class NewsController < ApplicationController
     @news = News.paginate(page: params[:page])
   end
 
+  def show
+    @news = News.find(params[:id])
+  end
+
+  def new
+    @new = News.new
+  end
+
+  def create
+    @news = News.new(news_params)
+  end
+
+  def edit
+    @news = News.find(params[:id])
+  end
+
+  def update
+    @news = News.find(params[:id])
+    if @news.update_attributes(user_params)
+      flash[:success] = "News updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    News.find(params[:id]).destroy
+    flash[:success] = "News deleted"
+    redirect_to news_url
+  end
+
   private
 
   def news_params
