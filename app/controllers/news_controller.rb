@@ -3,29 +3,29 @@ class NewsController < ApplicationController
   before_action :admin_user, only: [:destroy, :edit]
 
   def index
-    @news = News.paginate(page: params[:page])
+    @newses = News.paginate(page: params[:page])
   end
 
   def show
-    @new = News.find(params[:id])
+    @news = News.find(params[:id])
   end
 
   def new
-    @new = News.new
+    @news = News.new
     redirect_to root_url
   end
 
   def create
-    @new = News.new(news_params)
+    @news = News.new(news_params)
   end
 
   def edit
-    @new = News.find(params[:id])
+    @news = News.find(params[:id])
   end
 
   def update
-    @new = News.find(params[:id])
-    if @new.update_attributes(user_params)
+    @news = News.find(params[:id])
+    if @news.update_attributes(user_params)
       flash[:success] = "News updated"
       redirect_to @user
     else
